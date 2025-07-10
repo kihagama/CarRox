@@ -1,0 +1,110 @@
+.Navbar{
+width:100%;
+height:auto;
+background: linear-gradient(90deg, #0b1d3a, #102c57);
+
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+padding: 0 30px;
+box-sizing: border-box;
+
+
+
+}
+.Navbar img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.title{
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+    gap: 20px;
+}
+.title h1{
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-right: 10px;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 15px;
+  transition: color 0.5s ease;
+  transition: 0.4s ease-in;
+}
+nav a:hover {
+  color: orange;
+  background: gray;
+  padding: 8px;
+  border-radius: 10px;
+}
+nav a:active {
+  color: green;
+}
+#menu{
+    display: none;
+    
+}
+#bar{
+    width: 50px;
+    height: 5px;
+    background: white;
+    margin: 10px;
+}
+@media (max-width:768px){
+   nav{
+    display: none;
+    gap: 10px;
+   }
+   #menu{
+    display: block;
+   }
+   nav.mobile{
+    width: 80%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: rgb(18, 15, 67);
+    position: absolute;
+    top: 70px;
+    border-radius: 10px;
+    right: -10px;
+    z-index:100;
+    animation: slide 0.6s ease-in forwards
+   }
+    
+   @keyframes slide {
+  0%{
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+    
+   }
+   .Navbar{
+    gap: 90px;
+   }
+   nav a{
+    font-size: 16px;
+   }
+   .title{
+    margin-left: -15px;
+   }
+
+}

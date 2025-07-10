@@ -1,0 +1,14 @@
+.hovers {
+  background-color: #00BFA6;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.hovers:hover {
+  background-color: orange;
+}
