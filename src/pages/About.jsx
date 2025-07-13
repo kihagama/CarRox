@@ -66,7 +66,7 @@ const About = () => {
                   style={styles.teamCard}
                 >
                   <img
-                    src={`${import.meta.env.VITE_BASE}${member.image}`}
+                    src={member.image}
                     alt={member.name}
                     style={styles.teamImage}
                   />

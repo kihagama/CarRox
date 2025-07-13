@@ -10,7 +10,7 @@ const ForgotPassword = () => {
     e.preventDefault();
     setError('');
     try {
-      await axios.post('http://localhost:8000/api/password_reset/', { email });
+      await axios.post('https://backend-carrox.onrender.com/api/password_reset/', { email });
       setSubmitted(true);
     } catch (err) {
       setError('Failed to send reset email. Please check your email address.');

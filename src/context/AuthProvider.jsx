@@ -16,7 +16,7 @@ const AuthProvider = ({children}) => {
     const login= async(userdata)=>{
         try{
             setloading(true)
-        const response=await axios.post("http://localhost:8000/api/token/",userdata);
+        const response=await axios.post("https://backend-carrox.onrender.com/api/token/",userdata);
         toast.success("login successfully")
        
         setisallowed(true)
@@ -27,7 +27,7 @@ const AuthProvider = ({children}) => {
         navigate("/our-services")
         }catch(error){
             toast.error(error.response?.data?.detail)
-            console.log(error)
+            
         }finally{
             setloading(false)
         }

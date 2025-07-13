@@ -19,7 +19,7 @@ const  handlesubmit= async(e)=>{
     e.preventDefault();
     try{
          setloading(true)
-   const res=     await axios.post("http://127.0.0.1:8000/register/",formdata)
+   const res=     await axios.post("https://backend-carrox.onrender.com/register/",formdata)
         toast.success(res.data.message)
        navigate("/login")
 

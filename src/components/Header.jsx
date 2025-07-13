@@ -20,10 +20,10 @@ const Header = () => {
       if (!isallowed) return;
       try {
         const accessToken = localStorage.getItem('access');
-        const res = await axios.get('http://localhost:8000/profile/', {
+        const res = await axios.get('https://backend-carrox.onrender.com/profile/', {
           headers: { Authorization: `Bearer ${accessToken}` },
         });
-        setProfilePic(res.data.image ? `http://localhost:8000${res.data.image}` : null);
+        setProfilePic(res.data.image || null);
       } catch (err) {
         setProfilePic(null);
       }
@@ -43,7 +43,7 @@ const Header = () => {
     formData.append('image', file);
     try {
       const accessToken = localStorage.getItem('access');
-      await axios.post('http://localhost:8000/profile/update/', formData, {
+      await axios.post('https://backend-carrox.onrender.com/profile/update/', formData, {
         headers: { Authorization: `Bearer ${accessToken}` },
       });
       setProfilePic(URL.createObjectURL(file));

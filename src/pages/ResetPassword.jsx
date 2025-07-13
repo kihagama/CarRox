@@ -20,7 +20,7 @@ const ResetPassword = () => {
       return;
     }
     try {
-      await axios.post('http://localhost:8000/api/password_reset/confirm/', {
+      await axios.post('https://backend-carrox.onrender.com/api/password_reset/confirm/', {
         token,
         uid,
         password

@@ -90,7 +90,7 @@ const Service = () => {
       const payload = type === "CarWash" ? carWashForm : hireForm;
       const url = type === "CarWash" ? CARWASH_URL : HIRE_URL;
 
-      console.log("Submitting to", url, "with payload:", payload);
+      
 
       await axios.post(url, payload);
       toast.success(`${type === "CarWash" ? "Car Wash" : "Car Hire"} Submitted Successfully!`);
@@ -144,7 +144,7 @@ const Service = () => {
                 key={car.id}
               >
                 <img
-                  src={`${import.meta.env.VITE_BASE}${car.image}`}
+                  src={car.image || 'https://via.placeholder.com/600x300?text=No+Image'}
                   alt={car.title}
                   style={styles.cardImage}
                 />
@@ -276,6 +276,7 @@ const styles = {
     borderRadius: '6px',
     border: '1px solid #ccc',
     fontSize: '16px',
+    margin:"10px"
   },
   internCard: {
     backgroundColor: 'rgba(255, 255, 255, 0.07)',

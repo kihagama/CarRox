@@ -40,7 +40,7 @@ const UserBookings = () => {
       return;
     }
     try {
-      await axios.post('http://localhost:8000/pay/', {
+      await axios.post('https://backend-carrox.onrender.com/pay/', {
         booking_type: bookingType,
         booking_id: bookingId,
         amount: amount
@@ -64,11 +64,11 @@ const UserBookings = () => {
     }
     try {
       setLoading(true);
-      const response = await axios.get('http://localhost:8000/my-bookings/', {
+      const response = await axios.get('https://backend-carrox.onrender.com/my-bookings/', {
         headers: { Authorization: `Bearer ${accessToken}` },
       });
       setBookings(response.data);
-      console.log('Bookings:', response.data);
+      
     } catch (err) {
       console.error(err);
       if (err.response?.status === 401) {
@@ -96,7 +96,7 @@ const UserBookings = () => {
       return;
     }
     try {
-      await axios.delete(`http://localhost:8000/delete-booking/${bookingType}/${bookingId}/`, {
+      await axios.delete(`https://backend-carrox.onrender.com/delete-booking/${bookingType}/${bookingId}/`, {
         headers: { Authorization: `Bearer ${accessToken}` },
       });
       toast.success('Booking deleted successfully.');
@@ -152,7 +152,7 @@ const UserBookings = () => {
                   <img
                     src={
                       car.image
-                        ? `${import.meta.env.VITE_BASE}${car.image}`
+                        ? car.image
                         : 'https://via.placeholder.com/600x300?text=No+Image'
                     }
                     alt={car.title || 'Car Image'}
