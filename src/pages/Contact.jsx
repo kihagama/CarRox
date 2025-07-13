@@ -30,7 +30,7 @@ const Contact = () => {
           e.preventDefault();
           try{
             setloading(true)
-          const res=  await axios.post("https://backend-carrox.onrender.com/sendmails/",{usersname,message,email})
+          const res=  await axios.post(import.meta.env.VITE_SENDEMAILS,{usersname,message,email})
             toast.success(res.data.message)
             setName("")
             setEmail("")

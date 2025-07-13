@@ -16,7 +16,7 @@ const AuthProvider = ({children}) => {
     const login= async(userdata)=>{
         try{
             setloading(true)
-        const response=await axios.post("https://backend-carrox.onrender.com/api/token/",userdata);
+        const response=await axios.post(import.meta.env.VITE_AUTH,userdata);
         toast.success("login successfully")
        
         setisallowed(true)

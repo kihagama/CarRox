@@ -19,7 +19,7 @@ const  handlesubmit= async(e)=>{
     e.preventDefault();
     try{
          setloading(true)
-   const res=     await axios.post("https://backend-carrox.onrender.com/register/",formdata)
+   const res=     await axios.post(import.meta.env.VITE_REGISTER,formdata)
         toast.success(res.data.message)
        navigate("/login")
 
