@@ -59,7 +59,7 @@ const Header = () => {
     <div className='Navbar'>
       <div className='title'>
         <img src={log} alt="logo" />
-        <h1>CarRox</h1>
+        <h1>CarRoxS</h1>
       </div>
       <nav className={menu ? "mobile" : ""}>
         <Link to="/" onClick={() => setmenu(false)}>{menu?(<FaHome style={{fontSize:"15px"}}/>):(<></>)}<span></span> <span></span>HOME</Link>
