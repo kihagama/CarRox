@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes,Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 
 import Contact from './pages/Contact'
@@ -16,23 +16,23 @@ import ResetPassword from './pages/ResetPassword';
 const App = () => {
   return (
     <>
-    <Header/>
+      <Header />
       <Routes>
-        <Route path='/' element={<Home/>}/>
-         <Route path='/our-services' element={<Service/>}/>
-          <Route path='/contact' element={<Contact/>}/>
-           <Route path='/about-us' element={<About/>}/>
-           <Route path='/register' element={<Register/>}/>
-           <Route path='/login' element={<Login/>}/>
-           <Route path="/forgot-password" element={<ForgotPassword />} />
-           <Route path="/reset-password" element={<ResetPassword />} />
-            <Route path='*' element={<Fallback/>}/>  
-            <Route path="/my-bookings" element={<UserBookings />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/our-services' element={<Service />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/about-us' element={<About />} />
+        <Route path='/register' element={<Register />} />
+        <Route path='/login' element={<Login />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
+        <Route path='*' element={<Fallback />} />
+        <Route path="/my-bookings" element={<UserBookings />} />
 
       </Routes>
-      <Footer/>
-      </>
-    
+      <Footer />
+    </>
+
   )
 }
 

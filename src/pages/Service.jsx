@@ -108,7 +108,7 @@ const Service = () => {
   };
 
   const modalStyle = {
-    backgroundColor: '#fff', color: '#000', borderRadius: '12px', padding: '30px', maxWidth: '400px', width: '90%'
+    backgroundColor: '#fff', color: '#000', borderRadius: '12px', padding: '50px', maxWidth: '400px', width: '90%'
   };
 
   return (
